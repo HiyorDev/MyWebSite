@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauricio Vega | Backend Developer</title>
+  <meta name="description" content="Portafolio de Mauricio Vega (HiyorDev), estudiante de Ingeniería de Software enfocado en desarrollo backend, APIs y bases de datos. Proyectos con Python, FastAPI, PostgreSQL y más.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mauricio Vega | Backend Developer">
+  <meta property="og:description" content="Estudiante de Ingeniería de Software · Desarrollo backend, APIs y bases de datos.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#60;/&#62;</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- ============ TOP CONTROLS (theme + language) ============ -->
+  <div class="top-controls">
+    <button class="icon-toggle theme-toggle" id="themeToggle" aria-label="Cambiar entre modo oscuro y claro" aria-pressed="false" title="Cambiar tema">
+      <svg class="icon-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.5 14.5c-1 3.6-4.3 6.2-8.2 6.2-4.7 0-8.5-3.8-8.5-8.5 0-3.9 2.6-7.2 6.2-8.2.4-.1.8.2.7.6-.9 3.6.1 7.4 2.8 10.1 2.7 2.7 6.5 3.7 10.1 2.8.4-.1.7.3.6.7z" fill="currentColor"/>
+      </svg>
+      <svg class="icon-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.5" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <line x1="12" y1="1.5" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="22.5"/>
+          <line x1="1.5" y1="12" x2="4" y2="12"/>
+          <line x1="20" y1="12" x2="22.5" y2="12"/>
+          <line x1="4.2" y1="4.2" x2="5.9" y2="5.9"/>
+          <line x1="18.1" y1="18.1" x2="19.8" y2="19.8"/>
+          <line x1="4.2" y1="19.8" x2="5.9" y2="18.1"/>
+          <line x1="18.1" y1="5.9" x2="19.8" y2="4.2"/>
+        </g>
+      </svg>
+    </button>
+
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language / Cambiar idioma" title="EN / ES">
+      <span class="lang-toggle__label" id="langLabel">EN</span>
+    </button>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="#home" class="navbar__brand">Mauricio<span>.</span>dev</a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar__nav" id="navMenu" aria-label="Principal">
+        <a href="#home" data-i18n="nav_home">Inicio</a>
+        <a href="#about" data-i18n="nav_about">Sobre mí</a>
+        <a href="#stack" data-i18n="nav_stack">Stack</a>
+        <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+        <a href="#certifications" data-i18n="nav_certs">Certificaciones</a>
+        <a href="#contact" data-i18n="nav_contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__content hero-enter">
+          <p class="hero__kicker" data-i18n="hero_kicker">&lt;/&gt; hola, soy</p>
+          <h1 class="hero__name">Mauricio Vega</h1>
+          <p class="hero__role" data-i18n="hero_role">Backend Developer &mdash; Software Engineering Student</p>
+          <p class="hero__text" data-i18n="hero_text">
+            Estudiante de Ingeniería de Software enfocado en desarrollo backend, APIs y bases de datos.
+            Construyo proyectos con Python y FastAPI para reforzar lo que aprendo y seguir creciendo
+            como developer.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary" data-i18n="hero_cta_projects">Ver proyectos</a>
+            <a href="https://github.com/HiyorDev" class="btn btn--ghost" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="hero__mark hero-enter hero-enter--delay" aria-hidden="true">
+          <pre class="hero__code"><code><span class="c-key">class</span> <span class="c-cls">Developer</span>:
+    <span class="c-key">def</span> <span class="c-fn">__init__</span>(<span class="c-var">self</span>):
+        <span class="c-var">self</span>.name = <span class="c-str">"Mauricio Vega"</span>
+        <span class="c-var">self</span>.role = <span class="c-str">"Backend Dev"</span>
+        <span class="c-var">self</span>.stack = [
+            <span class="c-str">"Python"</span>, <span class="c-str">"FastAPI"</span>,
+            <span class="c-str">"PostgreSQL"</span>
+        ]
+        <span class="c-var">self</span>.learning = <span class="c-bool">True</span><span class="cursor-blink">&#9608;</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container section__grid">
+        <h2 class="section__title" data-i18n="about_title">Sobre mí</h2>
+        <div class="section__body">
+          <p data-i18n="about_p1">
+            Soy estudiante de Ingeniería de Software, enfocado en desarrollo backend, APIs, bases de
+            datos e ingeniería de software en general.
+          </p>
+          <p data-i18n="about_p2">
+            Disfruto construir proyectos para reforzar mis habilidades de programación y aprender
+            nuevas tecnologías a través de desarrollo práctico. La mayoría de mis proyectos usan
+            Python y FastAPI en el backend, combinados con bases de datos SQL y una interfaz web
+            simple hecha con HTML, CSS y JavaScript.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <section class="section section--tint" id="stack">
+      <div class="container section__grid">
+        <h2 class="section__title" data-i18n="stack_title">Stack</h2>
+        <div class="stack-groups">
+          <div class="stack-group reveal">
+            <h3 class="stack-group__label" data-i18n="stack_lang">Lenguajes</h3>
+            <ul class="chip-list">
+              <li>Python</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal">
+            <h3 class="stack-group__label" data-i18n="stack_backend">Backend</h3>
+            <ul class="chip-list">
+              <li>FastAPI</li>
+              <li>REST API</li>
+              <li>Pydantic</li>
+              <li>SQLAlchemy</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal">
+            <h3 class="stack-group__label" data-i18n="stack_db">Bases de datos</h3>
+            <ul class="chip-list">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>SQLite</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal">
+            <h3 class="stack-group__label" data-i18n="stack_tools">Herramientas</h3>
+            <ul class="chip-list">
+              <li>Git</li>
+              <li>Docker</li>
+              <li>Linux</li>
+              <li>Postman</li>
+              <li>Render</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__grid">
+          <h2 class="section__title" data-i18n="projects_title">Proyectos destacados</h2>
+          <p class="section__lede" data-i18n="projects_lede">
+            Repositorios fijados en mi <a href="https://github.com/HiyorDev" target="_blank" rel="noopener">GitHub</a>.
+            Cada tarjeta enlaza directo al código fuente del proyecto.
+          </p>
+        </div>
+
+        <div class="card-grid" id="projectsGrid">
+          <!-- project cards are generated by script.js from the projects array -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="section section--tint" id="certifications">
+      <div class="container">
+        <div class="section__grid">
+          <h2 class="section__title" data-i18n="certs_title">Certificaciones</h2>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Para agregar otra certificación: copia un bloque <a class="cert-card"> y cambia
+               la imagen, el nombre, el emisor y el enlace a tu insignia pública de Credly. -->
+          <a class="cert-card reveal" href="https://www.credly.com/badges/b785e29a-8248-4fc1-a0e7-87308dadb380/public_url" target="_blank" rel="noopener">
+            <img class="cert-card__img" src="https://images.credly.com/images/e3541a0c-dd4a-4820-8052-5001006efc85/linkedin_thumb_blob" alt="AWS Academy Graduate - Cloud Foundations" width="150" height="150" loading="lazy">
+            <div class="cert-card__body">
+              <h3 class="cert-card__title">AWS Academy Graduate &mdash; Cloud Foundations</h3>
+              <p class="cert-card__issuer">Amazon Web Services Training and Certification</p>
+              <span class="card__link" data-i18n="cert_view">Ver credencial &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container section__grid">
+        <h2 class="section__title" data-i18n="contact_title">Contacto</h2>
+        <div>
+          <p class="section__lede" style="margin-bottom:1.5rem;" data-i18n="contact_lede">Abierto a prácticas, proyectos colaborativos y oportunidades como backend developer.</p>
+
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:mauricio.vega.dev@gmail.com" class="contact-list__link reveal">
+                <svg class="contact-list__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>mauricio.vega.dev@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mauriciovegadev" class="contact-list__link reveal" target="_blank" rel="noopener">
+                <svg class="contact-list__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7.5 10.5v6M7.5 7.75v.01M11.5 16.5v-3.75c0-1.24 1-2.25 2.25-2.25s2.25 1.01 2.25 2.25v3.75" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>linkedin.com/in/mauriciovegadev</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/HiyorDev" class="contact-list__link reveal" target="_blank" rel="noopener">
+                <svg class="contact-list__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.17c0 4.48 2.87 8.28 6.84 9.63.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.17C22 6.58 17.52 2 12 2z" fill="currentColor"/></svg>
+                <span>github.com/HiyorDev</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p><span>&copy; <span id="year"></span> Mauricio Vega. </span><span data-i18n="footer_text">Hecho con HTML, CSS y JavaScript puro.</span></p>
+    </div>
+  </footer>
+
+  <!-- ============ PROJECT DETAIL MODAL ============ -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-close-modal aria-label="Cerrar detalles del proyecto">&times;</button>
+      <div class="modal__content" id="modalContent">
+        <!-- filled by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
